@@ -1,4 +1,4 @@
-// esto es solo un ejemplo
+d// esto es solo un ejemplo
 
 int mr1=8;  //motor right 1
 int mr2=9;  //motor right 2
