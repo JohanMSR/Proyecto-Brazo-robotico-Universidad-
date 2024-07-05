@@ -1,0 +1,70 @@
+Diagrama de flujo para la función "Testing Motors"
+
+Inicio
+
+1. Seleccionar motor
+
+Obtener el siguiente motor de la lista
+Si no hay más motores en la lista, ir a 11. Finalizar
+
+2. Conectar el motor
+
+Establecer conexión con el motor a través de la interfaz correspondiente
+Si la conexión falla, ir a 10. Registrar error de conexión
+
+3. Inicializar el motor
+
+Enviar comando de inicialización al motor
+Si la inicialización falla, ir a 9. Error del registrador de inicialización
+
+4. Validación de capacidad
+
+4.1. Establecer potencia mínima
+
+Enviar comando para establecer la potencia mínima del motor
+
+4.2. Ejecutar pruebas unitarias
+
+Ejecutar la batería de pruebas unitarias para el motor a la potencia mínima
+Si las pruebas unitarias fallan, ir a 8. Registrar fallo en pruebas unitarias
+
+4.3. Aumentar potencia
+
+Enviar comando para aumentar la potencia del motor a un valor incremental
+Si se alcanza la potencia máxima del motor, ir a 5. Validación finalizada
+4.4. Repetir los pasos 4.2 y 4.3
+
+5. Validación finalizada
+
+Enviar comando para establecer la potencia nominal del motor
+
+6. Ejecutar pruebas de funcionamiento
+
+Ejecutar pruebas de funcionamiento para verificar el comportamiento general del motor.
+
+7. Resultados del registrador
+
+Almacenar los resultados de las pruebas unitarias, las pruebas de funcionamiento y la validación de capacidad.
+
+8. Registrador fallo en pruebas unitarias
+
+Identificar el ID del motor y el nombre de la prueba unitaria fallida
+Almacenar la información del fallo en el registro de errores
+
+9. Error de inicialización del registrador
+
+Identificar el ID del motor y la causa del error de inicialización
+Almacenar la información del error en el registro de errores
+
+10. Error de conexión del registrador
+
+Identificar el ID del motor y la causa del error de conexión
+Almacenar la información del error en el registro de errores
+
+11. Finalizar
+
+Cerrar la conexión con el motor actual
+Si hay otro motor en la lista, vaya a 1. Seleccionar motor
+Si no hay más motores en la lista, finalice la ejecución de la función
+
+Fin
